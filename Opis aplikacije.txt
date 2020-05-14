@@ -1,0 +1,38 @@
+*****Edunova završna aplikacija *****
+
+***Uvod***
+
+- Taxi tvrtka vrši uslugu prijevoza njegovateljica u Austriju (područje gradova Graz i Klagenfurt).
+
+- Djelatnice rade kod starijih/nepokretnih osoba u privatnim kućama.
+
+- Svaka djelatnica ima jednu kuću, svaka kuća može imati jednu ili više djelatnica.
+
+- Djelatnice rade u smjenama 7, 14, 21 dan. Smjene su fiksne.
+
+- Djelatnice žive u raznim mjestima (kontinentalne Hrvatske) i prijevoz se vrši "od vrata do vrata". Vozač ih kombijem preuzima po unaprijed definiranom planu
+  i vozi do odredišta i natrag (rotacija smjena).
+
+
+***Aplikacija funkcionalnost***
+
+- Dispečiranje -> planiranje i kreiranje ruta po odredištima, planiranje prijevoza djelatnica po turnusu, statistika
+
+- Postoje dva odredišta Graz i Klagenfurt (sa okolicom). Graz se vozi svim radnim danima osim srijedom. U srijedu se vozi Klagenfurt.
+
+- Dispečer kreira plan rute po željenom datumu, odredištu, dodjeljuje joj vozilo, vozača i "puni" ju sa njegovateljicama (odlazak,dolazak).
+
+- Planiranje je potrebno (polu)automatizirati, tj. kada dispečer planira rutu, automatski mu se dodjele prijedlozi njegovateljica koje
+  idu na zadano odredište, tj. koje se vraćaju (prijedlog prema zadanom datumu, turnusu i trenutnoj poziciji).
+
+- Nakon dispečiranja, plan rute se printa/šalje na mail vozača. Plan sadrži redosljed vožnje, cijena za svaku osobu koja se prevozi, kontakt podatke njegovateljica, kao i planirana kilometraža.
+
+- Opcija mapiranja rute*
+
+- Ostale funkcionalnosti -> statistike po vozačima, njegovateljicama, vozilima, rutama
+
+**Opcija**
+
+- Ukoliko je web aplikacija, vozači bi imali pristup aplikaciji, svojim rutama, mapi, gps pozicijama....
+
+
