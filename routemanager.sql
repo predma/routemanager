@@ -22,7 +22,8 @@ create table klijent (
 id int not null primary key auto_increment,
 osobaid int not null,
 turnus int not null,
-adresaid int not null
+adresaid int not null,
+rutaid int not null
 
 );
 
@@ -130,3 +131,30 @@ id int not null primary key auto_increment,
 naziv varchar (100),
 opis text
 );
+
+alter table vozac add foreign key (osobaid) references osoba(id);
+
+alter table klijent add foreign key (osobaid) references osoba(id);
+alter table klijent add foreign key (rutaid) references ruta(id);
+alter table klijent add foreign key (adresaid) references adresa(id);
+
+
+alter table plan add foreign key (adresapolaskaid) references adresa(id);	
+alter table plan add foreign key (adresadolaskaid) references adresa(id);	
+alter table plan add foreign key (voziloid) references vozilo(id);	
+alter table plan add foreign key (vozacid) references vozac(id);	
+alter table plan add foreign key (rutaid) references ruta(id);	
+
+alter table plan_klijent add foreign key (planid) references plan(id);	
+alter table plan_klijent add foreign key (klijentid) references klijent(id);	
+
+alter table mjesto add foreign key (drzavaid) references drzava(id);	
+alter table adresa add foreign key (mjestoid) references mjesto(id);	
+
+alter table plan_trosak add foreign key (planid) references plan(id);	
+alter table plan_trosak add foreign key (trosakid) references trosak(id);	
+
+alter table vozilo add foreign key (modelid) references model(id);	
+alter table vozilo_servis add foreign key (voziloid) references vozilo(id);	
+alter table vozilo_servis add foreign key (servisid) references servis(id);	
+
